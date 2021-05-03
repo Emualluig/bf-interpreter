@@ -1,6 +1,6 @@
-use std::{collections::VecDeque, fs, io::Read, usize};
+use std::{collections::VecDeque, env, fs, io::Read, usize};
 
-const ARRAY_SIZE: usize = 1000;
+const ARRAY_SIZE: usize = 5000;
 
 enum Instruction {
     Increment,
@@ -176,7 +176,11 @@ fn read_tests() {
 }
 
 fn main() {
+    let args: Vec<String> = env::args().collect();
+
+    let file_path = args[1].clone();
+
     // Runs the file code.bf
-    let contents = fs::read_to_string("code.bf").expect("Something went wrong reading the file");
+    let contents = fs::read_to_string(file_path).expect("Something went wrong reading the file");
     interpreter(create_instructions(contents));
 }
