@@ -3,4 +3,4 @@ A simple brainfuck interpreter.
 
 Accepts one argument, the path to the bf code to be executed.
 
-Ex: rust-bf "C:\code.bf".
+Ex: rust-bf "C:\code.bf"
