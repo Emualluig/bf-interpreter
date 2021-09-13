@@ -73,7 +73,7 @@ fn create_instructions(input: String) -> Vec<Instruction> {
 //      the tape after the instructions are terminated
 // requires: instructions is valid brainfuck
 // notes:
-// time: O(n) where n is the total number of steps until termation of the instructions
+// time: O() is the O() of the given instructions
 fn interpreter(instructions: Vec<Instruction>) -> [u8; ARRAY_SIZE] {
     let mut tape = [0_u8; ARRAY_SIZE];
     let mut tape_pointer = 0;
